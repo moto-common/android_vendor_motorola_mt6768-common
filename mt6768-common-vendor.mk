@@ -6,12 +6,15 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/motorola/mt6768-common
 
 PRODUCT_COPY_FILES += \
-    vendor/motorola/mt6768-common/proprietary/vendor/bin/autobt:$(TARGET_COPY_OUT_VENDOR)/bin/autobt \
-    vendor/motorola/mt6768-common/proprietary/vendor/bin/bip:$(TARGET_COPY_OUT_VENDOR)/bin/bip \
-    vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/android.hardware.audio.service.mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.audio.service.mediatek \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/fuelgauged:$(TARGET_COPY_OUT_VENDOR)/bin/fuelgauged \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/fuelgauged_nvram:$(TARGET_COPY_OUT_VENDOR)/bin/fuelgauged_nvram \
     vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.1-service-mediatek \
     vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek \
     vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.mediatek.hardware.pq@2.2-service \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/nvram_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/nvram_daemon \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/wlan_assistant:$(TARGET_COPY_OUT_VENDOR)/bin/wlan_assistant \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/wmt_launcher:$(TARGET_COPY_OUT_VENDOR)/bin/wmt_launcher \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/wmt_loader:$(TARGET_COPY_OUT_VENDOR)/bin/wmt_loader \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/AbnormalDisplayLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/AbnormalDisplayLog_dynamic.xml \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/AudioLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/AudioLog_dynamic.xml \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/VideoLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/VideoLog_dynamic.xml \
@@ -128,11 +131,12 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/audio_param/Volume_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_AudioParam.xml \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/audio_param/Volume_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_ParamUnitDesc.xml \
-    vendor/motorola/mt6768-common/proprietary/vendor/etc/init/android.hardware.audio.service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio.service.mediatek.rc \
+    vendor/motorola/mt6768-common/proprietary/vendor/etc/aurisys_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config.xml \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
-    vendor/motorola/mt6768-common/proprietary/vendor/etc/init/init.bip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.bip.rc \
-    vendor/motorola/mt6768-common/proprietary/vendor/etc/init/init.bt_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.bt_drv.rc \
+    vendor/motorola/mt6768-common/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
+    vendor/motorola/mt6768-common/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
+    vendor/motorola/mt6768-common/proprietary/vendor/etc/init/nvram_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nvram_daemon.rc \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/arm.graphics-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/arm.graphics-V1-ndk_platform.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
@@ -174,12 +178,12 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libbluetooth_hw_test.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_hw_test.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libbluetooth_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_mtk.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libbluetooth_mtk_pure.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_mtk_pure.so \
-    vendor/motorola/mt6768-common/proprietary/vendor/lib/libbluetooth_relayer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_relayer.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libbluetoothem_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetoothem_mtk.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbwc.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libcustom_nvram.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcustom_nvram.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libcvsd_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcvsd_mtk.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib/libfgauge_gm30.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfgauge_gm30.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libfile_op.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfile_op.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libged.so:$(TARGET_COPY_OUT_VENDOR)/lib/libged.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libgpu_aux.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpu_aux.so \
@@ -192,6 +196,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libladder.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libmml.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmml.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libmsbc_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmsbc_mtk.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib/libmtkshifter_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmtkshifter_vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libnvram.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvram.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libnvram_sec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvram_sec.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libnxp_extamp_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnxp_extamp_intf.so \
@@ -199,6 +204,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libpqframework.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqframework.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libpqparamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqparamparser.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libpqpconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpqpconfig.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib/librt_extamp_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib/librt_extamp_intf.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libspeech_enh_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeech_enh_lib.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libspeechparser_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeechparser_vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libudf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libudf.so \
@@ -250,18 +256,21 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbluetooth_hw_test.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_hw_test.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbluetooth_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_mtk.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbluetooth_mtk_pure.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_mtk_pure.so \
-    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbluetooth_relayer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_relayer.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbluetoothem_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetoothem_mtk.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbwc.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libcomposer_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcomposer_ext.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libconnfem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libconnfem.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libcustom_nvram.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcustom_nvram.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libfile_op.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfile_op.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libged.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libged.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libgpu_aux.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpu_aux.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libgpud.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpud.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libgralloc_extra.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_extra.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libgralloc_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_metadata.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libgralloctypes_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloctypes_mtk.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libhwm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwm.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libhwmwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwmwrapper.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libion_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_mtk.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libion_ulit.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_ulit.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libladder.so \
@@ -274,6 +283,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libpqparamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqparamparser.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libpqpconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpqpconfig.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libudf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libudf.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libwifi-hal-mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-mtk.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libdpframework.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpframework.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libmtk_drvb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtk_drvb.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libnir_neon_driver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnir_neon_driver.so \
