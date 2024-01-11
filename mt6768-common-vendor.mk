@@ -6,7 +6,11 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/motorola/mt6768-common
 
 PRODUCT_COPY_FILES += \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-focalservice:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-focalservice \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-chipone \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-ets \
     vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-fpc \
+    vendor/motorola/mt6768-common/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.1-service-mediatek \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/AudioLog_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/AudioLog_dynamic.xml \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/apdb/APDB_MT6768_S01__W2243:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6768_S01__W2243 \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/apdb/APDB_MT6768_S01__W2243_ENUM:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6768_S01__W2243_ENUM \
@@ -122,9 +126,12 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/audio_param/Volume_AudioParam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_AudioParam.xml \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/audio_param/Volume_ParamUnitDesc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/Volume_ParamUnitDesc.xml \
     vendor/motorola/mt6768-common/proprietary/vendor/etc/aurisys_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/aurisys_config.xml \
-    vendor/motorola/mt6768-common/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-fpc2.rc \
+    vendor/motorola/mt6768-common/proprietary/vendor/etc/bluetooth_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_offload_audio_policy_configuration.xml \
+    vendor/motorola/mt6768-common/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/hw/audio.primary.mt6768.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.mt6768.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/hw/audio.r_submix.mt6768.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.r_submix.mt6768.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib/hw/fpsensor_fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/fpsensor_fingerprint.default.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libMtkAinrEnh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkAinrEnh.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libMtkSpeechEnh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libMtkSpeechEnh.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/lib_ainr_enh.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_ainr_enh.so \
@@ -144,6 +151,9 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libaurisysdemo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaurisysdemo.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libbessound_hd_mtk_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbessound_hd_mtk_vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libblisrc32_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libblisrc32_vendor.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib/libbluetooth_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_mtk.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib/libbluetooth_mtk_pure.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_mtk_pure.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbwc.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libcvsd_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcvsd_mtk.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libladder.so \
@@ -156,11 +166,15 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/libspeechparser_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeechparser_vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib/vendor.mediatek.hardware.audio@7.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.mediatek.hardware.audio@7.1.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/com.fingerprints.extension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.fingerprints.extension@1.0.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/hw/audio.primary.mt6768.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.mt6768.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/hw/audio.r_submix.mt6768.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.r_submix.mt6768.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/hw/fingerprint.focaltech.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.focaltech.default.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/hw/fpsensor_fingerprint.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fpsensor_fingerprint.default.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/hw/sensors.mt6768.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.mt6768.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libMtkAinrEnh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMtkAinrEnh.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libMtkSpeechEnh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libMtkSpeechEnh.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libRbsFlow.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRbsFlow.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/lib_ainr_enh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_ainr_enh.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/lib_iir.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_iir.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/lib_speech_enh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_speech_enh.so \
@@ -178,8 +192,12 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libaurisysdemo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaurisysdemo.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbessound_hd_mtk_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbessound_hd_mtk_vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libblisrc32_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libblisrc32_vendor.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbluetooth_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_mtk.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbluetooth_mtk_pure.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_mtk_pure.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libbwc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbwc.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libcvsd_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcvsd_mtk.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/libfp_ext_svc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfp_ext_svc2.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libladder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libladder.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libmsbc_mtk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmsbc_mtk.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libmtklimiter_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmtklimiter_vendor.so \
@@ -188,6 +206,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/librt_extamp_intf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librt_extamp_intf.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libspeech_enh_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspeech_enh_lib.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/libspeechparser_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspeechparser_vendor.so \
+    vendor/motorola/mt6768-common/proprietary/vendor/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.fpsensor.hardware.fpsensorhidlsvc@2.0.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/vendor.mediatek.hardware.audio@7.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.audio@7.1.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/vendor.mediatek.hardware.power@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.power@1.1.so \
     vendor/motorola/mt6768-common/proprietary/vendor/lib64/vendor.mediatek.hardware.power@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.mediatek.hardware.power@2.0.so
