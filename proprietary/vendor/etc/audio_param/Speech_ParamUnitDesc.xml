@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ParamUnitDesc tab_name="Voice" version="1.3">
+<ParamUnitDesc tab_name="Voice" version="1.2">
 	<CategoryTypeList>
 		<CategoryType name="Scene" feature_option="VIR_SCENE_CUSTOMIZATION_SUPPORT">
 			<Category name="Default" wording="Default"/>
@@ -39,19 +39,16 @@
 				<Category name="Usb_Headset" wording="USB Headset" feature_option="VIR_MTK_USB_PHONECALL"/>
 			</CategoryGroup>
 			<CategoryGroup name="Loopback">
-				<Category name="Lpbk_Handset" wording="Handset(Loopback)"/>
-				<Category name="Lpbk_Headset" wording="Headset(Loopback)"/>
-				<Category name="Lpbk_Handsfree" wording="Handsfree(Loopback)"/>
-				<Category name="Lpbk_Nodelay_Headset_Mic1" wording="Nodelay_Headset_Mic1(Loopback)" feature_option="SPH_PARAM_LPBK_NODELAY"/>
-				<Category name="Lpbk_Nodelay_Headset_Mic2" wording="Nodelay_Headset_Mic2(Loopback)" feature_option="SPH_PARAM_LPBK_NODELAY"/>
-				<Category name="Lpbk_Nodelay_Headset_Mic3" wording="Nodelay_Headset_Mic3(Loopback)" feature_option="SPH_PARAM_LPBK_NODELAY"/>
+				<Category name="Lpbk_Handset" wording="Handset"/>
+				<Category name="Lpbk_Headset" wording="Headset"/>
+				<Category name="Lpbk_Handsfree" wording="Handsfree"/>
+				<Category name="Lpbk_Nodelay_Headset_Mic1" wording="Nodelay_Headset_Mic1" feature_option="SPH_PARAM_LPBK_NODELAY"/>
+				<Category name="Lpbk_Nodelay_Headset_Mic2" wording="Nodelay_Headset_Mic2" feature_option="SPH_PARAM_LPBK_NODELAY"/>
+				<Category name="Lpbk_Nodelay_Headset_Mic3" wording="Nodelay_Headset_Mic3" feature_option="SPH_PARAM_LPBK_NODELAY"/>
 			</CategoryGroup>
 			<CategoryGroup name="Super Volume" feature_option="SPH_PARAM_SV">
 				<Category name="Handset_SV"/>
 				<Category name="Handsfree_SV"/>
-			</CategoryGroup>
-			<CategoryGroup name="Hearing Aid">
-				<Category name="Hearing_Aid" feature_option="MTK_BT_HEARING_AID_SUPPORT"/>
 			</CategoryGroup>
 		</CategoryType>
 		<CategoryType name="VolIndex" wording="Volume">
@@ -267,7 +264,7 @@
 			<Field name="4-8k LSPK Mic2 residual echo weighting for non-linear part" array_index="27" bit="3,5"    check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
 			<Field name="4-8k LSPK Mic2 ES smooth rate" array_index="27" bit="6,7"                      check_list="0,0.9,1,0.6,2,0.3,3,0"/>
 			<Field name="4-8k LSPK Mic2 ES gain lower bound" array_index="28" bit="10,14"               check_list="0,-62dB,1,-60dB,2,-58dB,3,-56dB,4,-54dB,5,-52dB,6,-50dB,7,-48dB,8,-46dB,9,-44dB,10,-42dB,11,-40dB,12,-38dB,13,-36dB,14,-34dB,15,-32dB,16,-30dB,17,-28dB,18,-26dB,19,-24dB,20,-22dB,21,-20dB,22,-18dB,23,-16dB,24,-14dB,25,-12dB,26,-10dB,27,-8dB,28,-6dB,29,-4dB,30,-2dB,31,0dB"/>
-			<Field name="4-8k LSPK Mic2 ES estimated echo control" array_index="27" bit="14,15"         check_list="0,0,1,0.3,2,0.7,3,1"/>           
+			<Field name="4-8k LSPK Mic2 ES estimated echo control" array_index="27" bit="14,15"         check_list="0,0,1,0.3,2,0.7,3,1"/>
 			<Field name="Reverb Echo Suppress switch" array_index="11" bit="12,12"                      check_list="0,off(Default),1,on"/>
 			<Field name="Reverb Echo Band" array_index="11" bit="13,13"                                 check_list="0,2.5K Hz,1,3.5K Hz"/>
 			<Field name="Reverb 0-2k ES gain lower bound" array_index="29" bit="0,4"                    check_list="0,-62dB,1,-60dB,2,-58dB,3,-56dB,4,-54dB,5,-52dB,6,-50dB,7,-48dB,8,-46dB,9,-44dB,10,-42dB,11,-40dB,12,-38dB,13,-36dB,14,-34dB,15,-32dB,16,-30dB,17,-28dB,18,-26dB,19,-24dB,20,-22dB,21,-20dB,22,-18dB,23,-16dB,24,-14dB,25,-12dB,26,-10dB,27,-8dB,28,-6dB,29,-4dB,30,-2dB,31,0dB"/>
@@ -417,22 +414,5 @@
 		<Param name="sph_out_iir_enh_eq_mag" type="double_array"/>
 		<Param name="sph_in_parameter" type="double_array"/>
 		<Param name="sph_out_parameter" type="double_array"/>
-		<Param name="sph_in_iir_enh_pmv_gain" type="double_array"/>
-		<Param name="sph_out_iir_enh_pmv_gain" type="double_array"/>
-		<Param name="sph_in_iir_enh_pmv_freq" type="double_array"/>
-		<Param name="sph_out_iir_enh_pmv_freq" type="double_array"/>
-		<Param name="sph_in_iir_enh_pmv_type" type="ushort_array"/>
-		<Param name="sph_out_iir_enh_pmv_type" type="ushort_array"/>
-		<Param name="sph_in_iir_enh_pmv_qfactor" type="double_array"/>
-		<Param name="sph_out_iir_enh_pmv_qfactor" type="double_array"/>
-		<Param name="sph_in_iir_mic1_pmv_gain" type="double_array"/>
-		<Param name="sph_in_iir_mic2_pmv_gain" type="double_array"/>
-		<Param name="sph_in_iir_mic1_pmv_freq" type="double_array"/>
-		<Param name="sph_in_iir_mic2_pmv_freq" type="double_array"/>
-		<Param name="sph_in_iir_mic1_pmv_type" type="ushort_array"/>
-		<Param name="sph_in_iir_mic2_pmv_type" type="ushort_array"/>
-		<Param name="sph_in_iir_mic1_pmv_qfactor" type="double_array"/>
-		<Param name="sph_in_iir_mic2_pmv_qfactor" type="double_array"/>
-		<Param name="speech_mode_para_ext" type="ushort_array"/>
 	</ParamUnit>
 </ParamUnitDesc>
